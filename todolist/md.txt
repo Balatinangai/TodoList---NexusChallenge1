@@ -1,0 +1,23 @@
+TodoListApplication.java: Ponto de entrada da aplicação Spring Boot.
+
+Configuração de Segurança (SecurityConfig.java): Configura a segurança da aplicação usando JWT para autenticação.
+
+Configuração do RabbitMQ (RabbitMQConfig.java): Define uma fila do RabbitMQ chamada taskQueue.
+
+Controladores (TaskController.java e AuthController.java): Gerenciam as requisições HTTP para tarefas e autenticação.
+
+Modelos (Task.java e User.java): Representam as entidades do banco de dados.
+
+Repositórios (TaskRepository.java e UserRepository.java): Interfaces para acessar os dados das entidades.
+
+Serviços (TaskService.java, UserService.java, e JwtService.java): Contêm a lógica de negócios para tarefas, usuários e JWT.
+
+application.properties: Configurações para conexão com o PostgreSQL e RabbitMQ, e configuração do JWT.
+
+LoginRequest.java: Contém os campos username e password necessários para autenticação do usuário. É usado pela AuthController para autenticar um usuário.
+
+RegisterRequest.java: Contém os campos username e password necessários para o registro de um novo usuário. É usado pela AuthController para criar uma nova conta de usuário.
+
+TaskDTO.java: Representa uma tarefa com campos como id, title, description, dueDate, priority, e status. É usado para transferir dados de tarefas entre a camada de controle e a camada de serviço.
+
+Esses arquivos DTO ajudam a manter a separação de preocupações e a garantir que os dados sejam transferidos de forma segura e consistente entre as partes da aplicação.
